@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Mobile Portrait</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-52.0985054%" y1="41.1260247%" x2="50%" y2="78.6506818%" id="linearGradient-1">
+            <stop stop-color="#F8CA24" offset="0%"></stop>
+            <stop stop-color="#EE9A10" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="52.2008557 57.0680962 39.5734047 57.0680962 45.8871302 33.7320306"></polygon>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="0%" y1="0%" x2="72.8498668%" y2="89.0666679%" id="linearGradient-4">
+            <stop stop-color="#F8CA24" offset="0%"></stop>
+            <stop stop-color="#E5A811" offset="42.9390258%"></stop>
+            <stop stop-color="#EC970B" offset="100%"></stop>
+        </linearGradient>
+        <path d="M74.6469702,67.9637744 C84.9364573,70.3275377 92,73 92,73 L92,0 L46,21.9251324 L-1.33517017e-15,0 L-1.33517017e-15,73 C-1.33517017e-15,73 7.42070772,70.1924058 18.129806,67.787325 L18.129806,26.8954174 L38.3174429,37.0469815 L46.0432943,30.0504514 L53.1346289,37.0469815 L74.6469702,26.8954174 L74.6469702,67.9637744 Z M59.1271667,65.2296277 C54.8756035,64.7226925 50.448535,64.4093941 46,64.4093941 C41.5512472,64.4093941 37.1239631,64.7227232 32.872209,65.2297021 L24.8009635,33.3980974 L46.0432943,54.7414497 L67.1944186,33.3980974 L59.1271667,65.2296277 Z" id="path-5"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait">
+            <g id="Group" transform="translate(4.000000, 14.000000)">
+                <g id="Triangle-1">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
