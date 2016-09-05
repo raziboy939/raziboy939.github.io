@@ -177,7 +177,7 @@ span.event-name:after{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff; /* change if the mask should have another color then white */
+    background-color: #000000; /* change if the mask should have another color then white */
     z-index: 999999; /* makes sure it stays on top */
 }
 #status {
