@@ -73,8 +73,8 @@ body, html{
    background: 
     
     linear-gradient(
-      rgba(0,0,0,0.75), 
-      rgba(0,0,0,0.75)
+      rgba(0,0,0,0.45), 
+      rgba(0,0,0,0.45)
     ),
     url(../img/wallpaper2.jpg);
     background-size: cover;
@@ -285,7 +285,7 @@ div#main-text{
 #hero .carousel-inner > .item > img, 
 #hero .carousel-inner > .item > a > img {
     line-height: 1;
-    opacity: 0.2;
+    opacity: 0.5;
     background-size: cover;
     width: 100%;
 }
@@ -641,6 +641,13 @@ a.btn { margin-right: 20px }
     padding: 20px;
     display: inline-block;
 }
+
+ ul.social-media li {
+    padding: 20px;
+    display: inline-block;
+}
+
+
 #about #about-slider .carousel-caption > ul.social-media li>a {
     color: #ffffff !important;
     transition: all .5s ease-in-out;
@@ -893,8 +900,7 @@ ul.qcontrols li.active {
     linear-gradient(
       rgba(0,0,0,0.70), 
       rgba(0,0,0,0.65)
-    ),
-    url(../img/contactWall.jpg);
+    );
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
