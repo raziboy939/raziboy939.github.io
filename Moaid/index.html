@@ -32,6 +32,9 @@
     <link rel="stylesheet" type="text/css" href="css/themes/default/default.css">
     <link rel="stylesheet" href="pricing/css/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="pricing/css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="unslider/dist/css/unslider.css">
+    <link rel="stylesheet" href="unslider/dist/css/unslider-dots.css">
+
     
 
     <!-- Stylesheet
@@ -49,6 +52,18 @@
     <!-- Modernizr
     ================================================== -->
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript">
+          /**
+ * @license
+ *! H5F
+ * https://github.com/ryanseddon/H5F/
+ * Copyright (c) Ryan Seddon | Licensed MIT
+ */
+
+(function(e,t){"function"==typeof define&&define.amd?define(t):e.H5F=t()})(this,function(){var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};if("object"==typeof t)for(var r in i)t[r]===void 0&&(t[r]=i[r]);if(n=t||i,a)for(var l=0,u=e.length;u>l;l++)s(e[l]);else s(e)},s=function(a){var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),b(a,"submit",function(i){e=!0,t||s||a.checkValidity()||w(i)},!1),!v())for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&&l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&&!s.test(i)&&p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&&(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&o&&(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o>l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&(n||r&&n)&&(u(i),i.validity.valid||s||(e&&i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(x,"validity")&&E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},b=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
+
+        </script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,7 +99,11 @@
 
     <!-- Hero Slider
     ================================================== -->
+    
     <section id="hero"> 
+    
+
+    
         
         <!-- Menu Toggle for Off Canvas-Menu -->
         <div id="menu" class="menu" data-toggle="offcanvas" data-target=".navmenu">
@@ -118,11 +137,11 @@
             </div> -->
 
             <div  class="item active"> <!-- Third Slider -->
-              <img src="img/wallpaper.jpg" alt="...">
+              <img style="z-index:"src="img/wallpaper.jpg" alt="...">
               <div style="margin-top:12%" class="carousel-caption">
                 <h1 class="goldWriting">Moaid Mahjoub</h1>
                 
-                <h4>Cultural Ambassador . Public Relations . Entrepreurship </h4>
+                <h4>Cultural Ambassador . Public Relations . Entrepreneurship </h4>
                 <a class="page-scroll" href="#portfolio"><span class="fa fa-angle-double-down fa-3x goldWriting"></span></a>
               </div>
             </div>
@@ -144,12 +163,16 @@
             <!-- <a href="#header-slider" role="button" data-slide="next"><span class="arrow-right"></span></a> --> <!-- Next Control -->
         </div>
 
+
     </section><!-- End Hero Slider -->
 
 
     <!-- Portfolio Section
     ================================================== -->
-    <section id="portfolio" > 
+    <div class="my-slider ">
+    <ul>
+
+    <li><section id="portfolio" class=""> 
         <div class="container-fluid"> <!-- Start Container -->
             <div class="row"> <!-- Start Row -->
 
@@ -234,12 +257,13 @@
                             <img src="img/moaid/2thumb.jpg" alt="img" class="img-responsive  contentImage">
                             <div class="hover-text animated">
                                 <div class="ptitle">
-                                    <a href="img/moaid/2.jpg" title="Bill Gates, American Entreprenuer and Founder of Microsoft" data-lightbox-gallery="gallery1"><h2 class="goldWriting">Bill Gates</h2>
+                                    <a href="img/moaid/2.jpg" title="Bill Gates, American Entrepreneurship and Founder of Microsoft" data-lightbox-gallery="gallery1"><h2 class="goldWriting">Bill Gates</h2>
+                                    
 
                                     </a>
                                 </div>
 
-                                <h4 align="center"> American Entreprenuer and Founder of Microsoft </h4>
+                                <h4 align="center"> American Entrepreneur and Founder of Microsoft </h4>
 
                                 
                             </div>
@@ -318,10 +342,880 @@
 
                 </div> <!-- End Third Column -->
 
+
+
             </div> <!-- End Row -->
         </div> <!-- End Container -->
         <div class="clearfix"></div>
-    </section>
+    </section> </li>
+
+
+      <li>  <section id="portfolio" class=""> 
+        <div class="container-fluid"> <!-- Start Container -->
+            <div class="row"> <!-- Start Row -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- First Column -->
+
+                   
+
+
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/9thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/9.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"> </h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/10thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/10.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/111.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/11.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End First Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Second Column -->
+
+                     <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/12.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/12.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/13thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/13.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/14thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/14.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Second Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Third Column -->
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/15thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/15.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/16thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/16.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/17thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/17.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Third Column -->
+
+               
+
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+        <div class="clearfix"></div>
+    </section> </li>
+
+
+    <li>  <section id="portfolio" class=""> 
+        <div class="container-fluid"> <!-- Start Container -->
+            <div class="row"> <!-- Start Row -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- First Column -->
+
+                   
+
+
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/18.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/18.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/19.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/19.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/20.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/21.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End First Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Second Column -->
+
+                     <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/22.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/22.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/23.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/23.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/24.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/24.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Second Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Third Column -->
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/25.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/25.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/26.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/26.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/27thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/27.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Third Column -->
+
+               
+
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+        <div class="clearfix"></div>
+    </section> </li>
+    <li>  <section id="portfolio" class=""> 
+        <div class="container-fluid"> <!-- Start Container -->
+            <div class="row"> <!-- Start Row -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- First Column -->
+
+                   
+
+
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/28.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/28.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/29thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/29.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/30thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/30.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End First Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Second Column -->
+
+                     <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/31.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/31.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/32.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/32.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/33.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/33.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Second Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Third Column -->
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/34.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/34.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/35thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/35.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/36thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/36.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Third Column -->
+
+               
+
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+        <div class="clearfix"></div>
+    </section> </li>
+    <li>  <section id="portfolio" class=""> 
+        <div class="container-fluid"> <!-- Start Container -->
+            <div class="row"> <!-- Start Row -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- First Column -->
+
+                   
+
+
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/37thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/37.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/38thumb.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/38.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/39.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/39.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End First Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Second Column -->
+
+                     <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/40.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/40.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/41.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/41.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/42.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/42.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Second Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Third Column -->
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/43.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/43.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/44.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/44.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/45.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/45.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Third Column -->
+
+               
+
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+        <div class="clearfix"></div>
+    </section> </li>
+
+    <li>  <section id="portfolio" class=""> 
+        <div class="container-fluid"> <!-- Start Container -->
+            <div class="row"> <!-- Start Row -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- First Column -->
+
+                   
+
+
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/46.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/46.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/47.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/47.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/48.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/48.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End First Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Second Column -->
+
+                     <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="img/moaid/49.jpg"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="img/moaid/49.jpg" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src="i"  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src=""  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Second Column -->
+
+                <div class="col-sm-4 col-md-4 col-lg-4 nopadding"> <!-- Third Column -->
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src=""  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src=""  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-box" >
+                        <div class="hover-bg">
+                             <img src=""  class="img-responsive  contentImage">
+                            <div class="hover-text animated">
+                                
+                                <div style="margin-top:10%"class="ptitle">
+                                   <a href="" title="" data-lightbox-gallery="gallery1"><h2 class="goldWriting"></h2>
+
+                                    </a>
+                                </div>
+                               
+                                 <h4 align="center">  </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End Third Column -->
+
+               
+
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+        <div class="clearfix"></div>
+    </section> </li>
+
+    </ul>
+
+
+
+    </div>
+
+   
+
+
+
+
+
+
+
+
+
+   
     
 
     <!-- About Page
@@ -346,7 +1240,7 @@
                     <div data-target="#about-slider" data-slide-to="1" class="tab active">
                         <div class="tmenu">
                             <i class="fa fa-bar-chart fa-3x goldWriting"></i>
-                            <h5 >Entreprenuership</h5>
+                            <h5 >Entrepreneurship</h5>
                             <span class="fa fa-angle-double-down fa-2x goldWriting"></span>
                         </div>
                     </div>
@@ -430,7 +1324,7 @@
 <p>Mr. Mahjoub hopes to encourage Middle-Eastern and Gulf Region tourists to come to the U.S. and for the U.S. to add signs in airports in Arabic to help the tourists find their way around the airport. Just like many airports have signs in Spanish and Chinese or Japanese.
 
     King Abdullah has instituted a huge Renewable Energy Plan due no later than 2032 for 54 Gigawatts (GW) of renewable energy. This opens up a huge possibility for California energy producers. Mr. Mahjoub would like to capitalize on this business trade potential between Saudi Arabia and the U.S.</p>
-                            <ul class="events" style="color:#ffffff">
+                   <!--          <ul class="events" style="color:#ffffff">
                                 <li class="details">
                                     <i class="fa fa-anchor"></i><a href="#"><span class="event-name">New York Photo Festival</span></a>
                                     <span class="meta-place">New York City</span>
@@ -451,7 +1345,7 @@
                                     <span class="meta-place">Arles (France)</span>
                                     <span class="meta-date">July 7 – Sept 1, 2015</span>
                                 </li>
-                            </ul>
+                            </ul> -->
 
                           </div>
                         </div> <!-- End Explore Content -->
@@ -515,14 +1409,14 @@
 
                                 <div class="item active">
                                     <div class="fancy"><img src="img/moaid/rec1.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
-                                    <blockquote>“Moaid is a pleasant and tentative employee with great business sense and public relations skills.”
+                                    <blockquote >“Moaid is a pleasant and tentative employee with great business sense and public relations skills.”
                                         <footer > <div class="goldWriting">Amal Algrafi </div>
 Operations Manager at Alwaleed bin Talal Foundations</footer>
                                     </blockquote>
                                 </div>
 
                                 <div class="item">
-                                    <div class="fancy"><span class="anchor"></span></div>
+                                    <div class="fancy"><img src="img/moaid/rec2.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
                                     <blockquote style="font-size:24px;">“ Moaid has built a strong (and deserved) reputation as someone with vision, diligence and honor – someone who gets things done! I have no hesitation in recommending Moaid and know that he will always give of his best in any endeavor. ”
                                         <footer> <div class="goldWriting">Majd Al-Haj-Hussein </div>
 National Manager – Procurement and Contracts Department at Zahid Group</footer>
@@ -530,12 +1424,86 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
                                 </div>
 
                                 <div class="item">
-                                    <div class="fancy"><span class="anchor"></span></div>
+                                   <div class="fancy"><img src="img/moaid/rec3.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
                                     <blockquote style="font-size:20px;">“Moaid is Great to work with, a very intelligent and resourceful individual. it was and still is a pleasure to work with, we have worked together on several projects for HRH and he dealt with every challenge elegantly and delicately. i really like detail oriented people and moaid is one of them. i will not be surprised in the next 20 years to see your name on headlines. it is always a pleasure to work with him.”
                                         <footer><div class="goldWriting">Sir Mohammad Bahareth</div>
                                         CEO at Help Nation</footer>
                                     </blockquote>
                                 </div>
+
+
+                                <div class="item">
+                                   <div class="fancy"><img src="img/moaid/rec4.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
+                                    <blockquote style="font-size:22px;">“I was privileged to work with Moaid for more than three years. He is proactive, WELL CONNECTED, result oriented, and always ready to go the extra mile to get the job done. I am hopeful that one day Moaid will play a great role in changing the world to make it a better place inshaallah.”
+                                        <footer><div class="goldWriting">Fatima Ibrahim</div>
+                                        Social Secretary at South African Consulate General</footer>
+                                    </blockquote>
+                                </div>
+
+                                <div class="item">
+                                   <div class="fancy"><img src="img/moaid/rec5.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
+                                    <blockquote style="font-size:26px;">“He has extensive experience in public relations and international trade as well as in cultural and social exchanges 
+I had the privilege to work with him and to participate in several areas”
+                                        <footer><div class="goldWriting">Feras Abuzaid</div>
+                                        Branch Manager (KAUST) KSA Regional Coordintor for Samba Dubai Referral Program at Samba Financial Group </footer>
+                                    </blockquote>
+                                </div>
+
+                                 <div class="item">
+                                   <div class="fancy"><img src="img/moaid/rec6.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
+                                    <blockquote style="font-size:26px;">“Mr. Moahjoub is an outgoing and highly dedicated young professional. He has excellent communication skills, is a self starter, and is driven to excellence”.
+                                        <footer><div class="goldWriting">Norveli Van Coots</div>
+                                        President and CEO, Holy Cross Health. President and CEO, Maryland Region, Trinity Health</footer>
+                                    </blockquote>
+                                </div>
+
+
+                                <div class="item">
+                                   <div class="fancy"><img src="img/moaid/rec7.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
+                                    <blockquote style="font-size:20px;">“Moaid Mahjoub started as an ambassador for our international branch. Mr. Mahjoub assisted in creating new links with several international business partners that will increase the revenue stream for the company and also broaden the name recognition for the company through utilizing his connections with the US Department of State and US Department of Education".
+”
+                                        <footer><div class="goldWriting">Daryan Chan</div>
+                                        Higher Education Professional</footer>
+                                    </blockquote>
+                                </div>
+
+                                <div class="item">
+                                   <div class="fancy"><img src="img/moaid/rec8.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
+                                    <blockquote style="font-size:24px;">“Moaid is a very conscientious worker who really cares about his responsibilities. He is also a people person and is good at networking and meeting new business colleagues. He also really cares about the welfare of others and helps people whenever he can".
+”
+                                        <footer><div class="goldWriting">Nicholas Kolivas</div>
+                                        Member and Scribe at CCNC-N Training and Care</footer>
+                                    </blockquote>
+                                </div>
+
+                                <div class="item">
+                                   <div class="fancy"><img src="img/moaid/rec9.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
+                                    <blockquote style="font-size:24px;">“I had the privilege getting to know a young and super active personality like Moaid Mahjoub. He is away above his age. He is well-connected to powerful leaders and business society. Moreover, his loyalty toward culture and traditions will distinguish him in the near future among competition"
+”
+                                        <footer><div class="goldWriting">Yazan Jamous</div>
+                                        Head of Talent / Alternative Revenue at Uturn</footer>
+                                    </blockquote>
+                                </div>
+
+
+                                <div class="item">
+                                   <div class="fancy"><img src="img/moaid/rec10.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
+                                    <blockquote style="font-size:26px;">“It is with a great pleasure to write my recommendation for Mr Moahjoub, I have worked with Moaid in the past and I would highly recommend him for those who’s looking for an enthusiastic hard working and professional person"
+”
+                                        <footer><div class="goldWriting">Ayman Alghanmi</div>
+                                        Lecturer at King AbdulAziz University</footer>
+                                    </blockquote>
+                                </div>
+
+                                <div class="item">
+                                   <div class="fancy"><img src="img/moaid/rec11.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150"></div>
+                                    <blockquote style="font-size:20px;">“I have met Moaid for around 3 years and I have seen him bloom into an active and personable public relations person. He is very alert, flexible and has a joyous disposition and generous heart. Through him I have learned about Saudi Arabia and the Middle Eastern culture. He is a natural ambassador for his country and I hope to see him in the future representing his country and generation in positions that will bring unity, equality and peace to mankind"
+”
+                                        <footer><div class="goldWriting">Irma Perez</div>
+                                        Deputy Probation Officer at SF. Adult Probation Department</footer>
+                                    </blockquote>
+                                </div>
+
 
                             </div><!-- End Quote Wrapper for slides -->
 
@@ -544,11 +1512,11 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
                     </div> <!-- End Quote Box -->
 
                     <!-- Controls Navigation -->
-                    <ul class="qcontrols">
+                    <!-- <ul class="qcontrols">
                         <li data-target="#quotes" data-slide-to="0" class="quote-nav active"></li>
                         <li data-target="#quotes" data-slide-to="1" class="quote-nav"></li>
                         <li data-target="#quotes" data-slide-to="2" class="quote-nav"></li>
-                    </ul>
+                    </ul> -->
 
                 </div>
 
@@ -557,13 +1525,14 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
                         <div class="row">
                             
                             <div class="col-md-6 col-md-offset-3">
-                                    <hr>
-                             <ul class="social-media" style="margin-left:10%">
-                                <li><a href="#"><i class="fa fa-facebook fa-3x goldWriting"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter fa-3x goldWriting"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble fa-3x goldWriting"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus fa-3x goldWriting"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance fa-3x goldWriting"></i></a></li>
+                            <br>
+                                    <hr class="horizontalLine">
+                             <ul class="social-media" style="margin-left:27%">
+                                <li><a href="https://www.facebook.com/Ambassadormoaidmahjoub/?fref=ts"><i class="fa fa-facebook fa-3x goldWriting"></i></a></li>
+                                <li><a href="https://twitter.com/moaidmahjoub?lang=en"><i class="fa fa-twitter fa-3x goldWriting"></i></a></li>
+                                
+                                <li><a href="https://www.linkedin.com/in/moaid-mahjoub-b828973a"><i class="fa fa-linkedin fa-3x goldWriting"></i></a></li>
+                                
                             </ul>
                         </div>
                         </div>
@@ -571,6 +1540,29 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
         </div> <!-- End Container -->
          <div class="space"></div>
           <div class="space"></div>
+    </section>
+
+    <section id="about" class="blackWallpaper">
+        <div class="container-fluid"> <!-- Start Container -->
+
+            <!-- Tabs Controls/Naviagtion -->
+
+            <div class="row">
+
+                                
+                            <h2 style="text-align: center" >Partners</h2>
+                            <hr class="horizontalLine">
+                        
+        </div>
+            <div class="row"  align="center" style="margin-top:10%"> <!-- Start Row -->
+            <div class="col-md-3"> <a href="www.celebritiesworld.org"><img src="img/moaid/celebrities.png"  class="img-responsive  contentImage" width="150px;" height="150px"> </a></div>
+            <div class="col-md-3"> <a href="WWW.FOREVERBEAUMORE.COM"><img src="img/moaid/forever.png"  class="img-responsive  contentImage"width="300px;" height="300px">  </a></div>
+            <div class="col-md-3"> <a href="http://www.help-nation.com"><img src="img/moaid/HelpNation.png"  class="img-responsive  contentImage"width="350px;" height="350px"> </a></div>
+                
+            <div class="col-md-3" align="left"> <a href="https://t.co/quvhMnhwqA"><img src="img/moaid/limo.png"  class="img-responsive  contentImage"width="300px;" height="300px"></a> </div>
+
+            </div>
+        </div>
     </section>
     
 
@@ -583,7 +1575,7 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
             <div class="row"> <!-- Start Row -->
                 <div class="col-md-10 col-md-offset-1">
                 
-                    <form name="sentMessage" id="contactForm" novalidate >
+                    <form name="sentMessage" id="contactForm" action="https://docs.google.com/forms/d/1cqBiepGDKULlAJmi6ipKARIyn9rRH8j10k5bZJGumlg/formResponse" method="POST" target="_self" onsubmit=" this.post();this.reset();" >
                         <div id="form" class="contact-form" >
                             <div class="row">
 
@@ -597,7 +1589,7 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
                             
                                
                                 <div class="form-group">
-                                    <input type="email" autocomplete="off" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email.">                            
+                                    <input type="text" id='email' name='email' type='email' class="form-control ss-q-short" placeholder="Your Email *" required data-validation-required-message="Please enter your email." >                            
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 
@@ -605,7 +1597,7 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
                             <p style="text-align:center">Enter your email and get updates about my activity!</p>
                             <div class="text-center">
                             <div id="success"></div>
-                            <button type="submit" class="btn btn-primary contact-btn ">Send</button> <!-- Send button -->
+                            <button type="submit"class="btn btn-primary contact-btn ">Send</button> <!-- Send button -->
                         </div>
 
                              
@@ -617,6 +1609,7 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
 
             </div> <!-- End Row -->
         </div><!-- End Container -->
+    </div>
 
     </section>
 
@@ -631,10 +1624,11 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
     ================================================== -->
-    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+   
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
+     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
 
     <!-- Other JS Files -->
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
@@ -650,6 +1644,25 @@ National Manager – Procurement and Contracts Department at Zahid Group</footer
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="pricing/js/main.js"></script>
+    <script src='google-sheet.js'></script>
+   <script src="https://stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
+<script src="https://stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
+<script src="https//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+    <script src="unslider/js/unslider.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('.my-slider').unslider({
+              arrows:false,
+              nav:false,
+              autoplay: true,
+              speed: 10000
+                
+                
+            });
+        });
+    </script>
+
+
 
   </body>
 </html>
