@@ -9,6 +9,49 @@ html {
     height:100%;
 }
 
+
+
+
+@media only screen and (min-width : 1224px) {
+
+     .intro{
+        margin-right: 25%;
+
+    }
+
+    .iframe{
+        width: 760px;
+        height: 1000px;
+    }
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+     .intro{
+        margin-right: 25%;
+
+    }
+     .iframe{
+        width: 760px;
+        height: 1000px;
+    }
+/* Styles */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+     .intro{
+        margin-right: 0px;
+
+    }
+     .iframe{
+       width:auto;
+       height: auto;
+    }
+/* Styles */
+}
+
 body {
     font-family: 'open_sanslight', sans-serif;
     color: #fff;
