@@ -19,6 +19,7 @@
 	}
 	html, body {
 		background: #252525;
+		
 		width:100%;
 		height:100%;
 		padding:0;
@@ -105,6 +106,7 @@
 /* Page Animated item Styles */
 
 	.animated{
+		visibility: hidden;
 		
 	}
 
@@ -487,9 +489,14 @@ opacity: 0;
 /* Home Section Animated Version */
 
 	.home-animated{
-		background-image:url(../images/backgrounds/bg.png);
-		position: relative;
-
+		background-image:url(../images/animate.jpg);
+		background-size: cover;
+		background-position: 50% 50%;
+		background-attachment: fixed !important;
+		background-repeat: repeat;
+		-webkit-animation: BackgroundAnimation 300s linear infinite;
+		-moz-animation: BackgroundAnimation 300s linear infinite;
+   		 -ms-animation: BackgroundAnimation 300s linear infinite;
 		
 	}
 	.justify-content-center {
@@ -1154,7 +1161,7 @@ opacity: 0;
 
 
 /* Services */
-.video-background-load{
+#video-background-load{
 	
 	background: url('../images/backgrounds/bg.png') no-repeat center center ;
 	width:100%;
@@ -1164,11 +1171,11 @@ opacity: 0;
 
 
 }
-.video{
+#video{
 		width:100%;
-		height: 720px;
+		min-height: 1000px;
 		overflow: hidden;
-		background: url('../images/backgrounds/bg.png') no-repeat center center ;
+		background: url('../images/backgrounds/bg.png') center center no-repeat ;
 		
 
 	}
@@ -1176,6 +1183,7 @@ opacity: 0;
 #team{
 		border-bottom:1px solid #2e2e2e;
 		background:url(../images/backgrounds/values3.jpg) center fixed no-repeat;
+		min-height: 720px;
 	}
 .middle{
 	margin-left: 5%;
@@ -1193,12 +1201,12 @@ opacity: 0;
 		overflow: hidden;
 	}
 	#features{
-		background:url(../images/backgrounds/values.jpeg) no-repeat center;
+		background:url(../images/backgrounds/values.jpeg) no-repeat;
 		padding:55px 0;
 		overflow: hidden;
 	}
 	#about{
-		background:url("https://images.pexels.com/photos/265047/pexels-photo-265047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=750") center no-repeat ;
+		background:url(../images/backgrounds/services.jpeg) center no-repeat ;
 
 		padding:2px 0;
 		overflow: hidden;
@@ -2128,18 +2136,21 @@ opacity: 0;
 	}
 
 /* Why Oxygen */
+.why-we-chart{
+		background:url(../images/backgrounds/chart.png) no-repeat center center;
+		margin:0 auto;
+		min-height: 800px;
+	}
 
 	.why-we{
-		background:url(../images/backgrounds/chart.png)  fixed;
+		
 		margin:0 auto;
-		min-height: 800px;
+		min-height: 900px;
+
 	}
 
-	.why-we-scroll{
-		background:url(../images/backgrounds/chart.png)  fixed;
-		margin:0 auto;
-		min-height: 800px;
-	}
+
+	
 
 	#why-we .left{
 		height: auto;
@@ -2502,7 +2513,7 @@ opacity: 0;
 		border-left:2px solid white;
 		border-right:2px solid white;
 		padding:0 17px;
-		margin:15px auto 0;
+		margin:50px auto 0;
 		line-height: 30px;
 	}
 

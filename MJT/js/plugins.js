@@ -566,122 +566,122 @@ $(document).ready(function() {
 Google Map
 =============================================== */
 
-$(document).ready(function() {
-			'use strict';
+// $(document).ready(function() {
+// 			'use strict';
 
-			//Google Map Open&Close Effect
-			$( ".google-map-big-button" ).click(function(){
-				$( "#map-button" ).toggleClass( "close-map-button", "open-map-button", 1000 );
-				$( "#map-button" ).toggleClass( "open-map-button", "close-map-button", 1000 );
-				$( "#map" ).toggleClass( "close-map", "open-map", 1000 );
-				$( "#map" ).toggleClass( "open-map", "close-map", 1000 );
-				return false;
-			});
+// 			//Google Map Open&Close Effect
+// 			$( ".google-map-big-button" ).click(function(){
+// 				$( "#map-button" ).toggleClass( "close-map-button", "open-map-button", 1000 );
+// 				$( "#map-button" ).toggleClass( "open-map-button", "close-map-button", 1000 );
+// 				$( "#map" ).toggleClass( "close-map", "open-map", 1000 );
+// 				$( "#map" ).toggleClass( "open-map", "close-map", 1000 );
+// 				return false;
+// 			});
 
-			// Map Coordination
+// 			// Map Coordination
 
-			var latlng = new google.maps.LatLng(41.862274,-87.661328);
+// 			var latlng = new google.maps.LatLng(41.862274,-87.661328);
 
-			// Map Options
-			var myOptions = {
-				zoom: 15,
-				center: latlng,
-				mapTypeId: google.maps.MapTypeId.ROADMAP,
-				disableDefaultUI: true,
-				scrollwheel: false,
-			};
+// 			// Map Options
+// 			var myOptions = {
+// 				zoom: 15,
+// 				center: latlng,
+// 				mapTypeId: google.maps.MapTypeId.ROADMAP,
+// 				disableDefaultUI: true,
+// 				scrollwheel: false,
+// 			};
 
-			var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
+// 			var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
 
-			// Marker Image
-			var image = 'images/marker.png';
+// 			// Marker Image
+// 			var image = 'images/marker.png';
 			
-		  	/* ========= First Marker ========= */
+// 		  	/* ========= First Marker ========= */
 
-		  	// First Marker Coordination
+// 		  	// First Marker Coordination
 			
-			var myLatlng = new google.maps.LatLng(41.856774,-87.679928);
+// 			var myLatlng = new google.maps.LatLng(41.856774,-87.679928);
 
-			// Your Texts 
+// 			// Your Texts 
 
-			 var contentString = '<div id="content">'+
-			  '<div id="siteNotice">'+
-			  '</div>'+
-			  '<h4>' +
+// 			 var contentString = '<div id="content">'+
+// 			  '<div id="siteNotice">'+
+// 			  '</div>'+
+// 			  '<h4>' +
 
-			  'Office 1'+
+// 			  'Office 1'+
 
-			  '</h4>'+
-			  '<p>' +
+// 			  '</h4>'+
+// 			  '<p>' +
 
-			  'Your description is here.' +
+// 			  'Your description is here.' +
 
-			  '</p>'+
-			  '</div>';
+// 			  '</p>'+
+// 			  '</div>';
 			
 
-			var marker = new google.maps.Marker({
-				  position: myLatlng,
-				  map: map,
-				  title: 'Hello World!',
-				  icon: image
-			  });
+// 			var marker = new google.maps.Marker({
+// 				  position: myLatlng,
+// 				  map: map,
+// 				  title: 'Hello World!',
+// 				  icon: image
+// 			  });
 
 
-			var infowindow = new google.maps.InfoWindow({
-			  content: contentString
-			  });
+// 			var infowindow = new google.maps.InfoWindow({
+// 			  content: contentString
+// 			  });
 
 			  
-			 google.maps.event.addListener(marker, 'click', function() {
-				infowindow.open(map,marker);
-			  });
+// 			 google.maps.event.addListener(marker, 'click', function() {
+// 				infowindow.open(map,marker);
+// 			  });
 
-			 /* ========= End First Marker ========= */
-
-
+// 			 /* ========= End First Marker ========= */
 
 
-			 /* ========= Second Marker ========= */
 
-			 // Second Marker Coordination
 
-			 var myLatlngSecond = new google.maps.LatLng(41.863774,-87.639928);
+// 			 /* ========= Second Marker ========= */
 
-			 // Your Texts
+// 			 // Second Marker Coordination
 
-			 var contentStringSecond = '<div id="content">'+
-			  '<div id="siteNotice">'+
-			  '</div>'+
-			  '<h4>' +
+// 			 var myLatlngSecond = new google.maps.LatLng(41.863774,-87.639928);
 
-			  'Office 2'+
+// 			 // Your Texts
 
-			  '</h4>'+
-			  '<p>' +
+// 			 var contentStringSecond = '<div id="content">'+
+// 			  '<div id="siteNotice">'+
+// 			  '</div>'+
+// 			  '<h4>' +
 
-			  'Your description is here.' +
+// 			  'Office 2'+
 
-			  '</p>'+
-			  '</div>';
+// 			  '</h4>'+
+// 			  '<p>' +
 
-			  var infowindowSecond = new google.maps.InfoWindow({
-				  content: contentStringSecond,
-				  });
+// 			  'Your description is here.' +
 
-			 var markerSecond = new google.maps.Marker({
-				  position: myLatlngSecond,
-				  map: map,
-				  title: 'Hello World!',
-				  icon: image
-			  });
+// 			  '</p>'+
+// 			  '</div>';
 
-			 google.maps.event.addListener(markerSecond, 'click', function() {
-				infowindowSecond.open(map,markerSecond);
-			  });
+// 			  var infowindowSecond = new google.maps.InfoWindow({
+// 				  content: contentStringSecond,
+// 				  });
 
-			 /* ========= End Second Marker ========= */
+// 			 var markerSecond = new google.maps.Marker({
+// 				  position: myLatlngSecond,
+// 				  map: map,
+// 				  title: 'Hello World!',
+// 				  icon: image
+// 			  });
+
+// 			 google.maps.event.addListener(markerSecond, 'click', function() {
+// 				infowindowSecond.open(map,markerSecond);
+// 			  });
+
+// 			 /* ========= End Second Marker ========= */
 		
-		})
+// 		})
 
 
