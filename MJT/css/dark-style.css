@@ -1184,7 +1184,7 @@ opacity: 0;
 	}
 
 #team{
-		border-bottom:1px solid #2e2e2e;
+		
 		background:url(../images/backgrounds/values4.jpeg)  fixed ;
 		min-height: 720px;
 	}
@@ -1204,7 +1204,7 @@ opacity: 0;
 		overflow: hidden;
 	}
 	#features{
-		background:url(../images/backgrounds/about2Flipped.jpg) no-repeat;
+		background:url(../images/backgrounds/iphone.jpg) no-repeat;
 		padding:55px 0;
 		overflow: hidden;
 	}
