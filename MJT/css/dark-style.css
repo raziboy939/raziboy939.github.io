@@ -1201,7 +1201,7 @@ opacity: 0;
 		overflow: hidden;
 	}
 	#features{
-		background:url(../images/backgrounds/values.jpeg) no-repeat;
+		background:url(../images/backgrounds/valuesFixed.jpg) left no-repeat;
 		padding:55px 0;
 		overflow: hidden;
 	}
