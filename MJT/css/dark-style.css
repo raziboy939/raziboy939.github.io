@@ -327,6 +327,9 @@
 	.black{
 		color:black !important;
 	}
+	.blue{
+		color: #1ed2ff;
+	}
 
 	.white{
 		color:#f0f0f0 !important;
@@ -420,7 +423,7 @@ opacity: 0;
 .home.backgroundLoad{
 
 	
-	 background: url('../images/backgrounds/bg.png') no-repeat center center ;
+	 background: url('../images/backgrounds/bgDark.png') no-repeat center center ;
 	 
   
 }
@@ -507,7 +510,7 @@ opacity: 0;
 	.hometexts-1{
 		font-size:95px;
 		height:auto;
-		color:white;
+		color:black;
 		line-height: 95px;
 	}
 
@@ -1119,7 +1122,7 @@ opacity: 0;
 
 	.about-icon i{
 		font-size:34px;
-		color:#464646;
+		
 		z-index: 4;
 		position: relative;
 		line-height: 95px;
@@ -1182,7 +1185,7 @@ opacity: 0;
 
 #team{
 		border-bottom:1px solid #2e2e2e;
-		background:url(../images/backgrounds/values3.jpg) center fixed no-repeat;
+		background:url(../images/backgrounds/values4.jpeg)  fixed ;
 		min-height: 720px;
 	}
 .middle{
@@ -1190,23 +1193,23 @@ opacity: 0;
 	margin-right: 5%;
 }
 #history{
-	background:url(../images/backgrounds/industry.jpeg) no-repeat;
+	background:url(../images/backgrounds/industryLight.jpg) no-repeat;
 		
 		overflow: hidden;
 }
 
 	#services{
-		background:url(../images/backgrounds/about.jpeg) center center no-repeat ;
+		background:url(../images/backgrounds/about2.jpg) center center no-repeat ;
 		padding:55px 0;
 		overflow: hidden;
 	}
 	#features{
-		background:url(../images/backgrounds/valuesFixed.jpg) left no-repeat;
+		background:url(../images/backgrounds/about2Flipped.jpg) no-repeat;
 		padding:55px 0;
 		overflow: hidden;
 	}
 	#about{
-		background:url(../images/backgrounds/services.jpeg) center no-repeat ;
+		background:url(../images/backgrounds/services1.jpg) center no-repeat ;
 
 		padding:2px 0;
 		overflow: hidden;
@@ -1238,7 +1241,7 @@ opacity: 0;
 
 	.service-box .service-icon i{
 		font-size:26px;
-		color:white;
+		color:black;
 		z-index: 4;
 		position: relative;
 		line-height: 70px;
@@ -1252,7 +1255,7 @@ opacity: 0;
 	}
 
 	.service-box:hover .service-icon i{
-		color:#323332;
+		color: #1ed2ff;
 	}
 
 	.service-box .service-header{
@@ -2481,6 +2484,7 @@ opacity: 0;
 		height: auto;
 		position: absolute;
 		top:50%;
+		margin-left:25px;
 		margin:0 auto;
 		left:50%;
 		margin-top:-88px;
@@ -2516,7 +2520,17 @@ opacity: 0;
 		margin:50px auto 0;
 		line-height: 30px;
 	}
-
+.video-button label.video-text{
+		font-size:40px;
+		border-left:2px solid white;
+		border-right:2px solid white;
+		padding:0 17px;
+		margin:50px auto 0;
+		line-height: 30px;
+	}
+	.video-button label.video-text:hover{
+		cursor: pointer;
+	}
 /* Video Button Rollover */
 
 	.video-button:hover{
