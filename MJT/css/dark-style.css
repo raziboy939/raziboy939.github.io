@@ -330,6 +330,9 @@
 	.blue{
 		color: #1ed2ff;
 	}
+	.orange{
+		color: #FFAA3B;
+	}
 
 	.white{
 		color:#f0f0f0 !important;
@@ -423,7 +426,7 @@ opacity: 0;
 .home.backgroundLoad{
 
 	
-	 background: url('../images/backgrounds/bgDark.png') no-repeat center center ;
+	 background: url('../images/backgrounds/bg_latest.png') no-repeat center center ;
 	 
   
 }
@@ -1122,7 +1125,7 @@ opacity: 0;
 
 	.about-icon i{
 		font-size:34px;
-		
+		color: #FFAA3B;
 		z-index: 4;
 		position: relative;
 		line-height: 95px;
@@ -1241,7 +1244,7 @@ opacity: 0;
 
 	.service-box .service-icon i{
 		font-size:26px;
-		color:black;
+		
 		z-index: 4;
 		position: relative;
 		line-height: 70px;
@@ -1339,7 +1342,7 @@ opacity: 0;
 	}
 
 	.f-box:hover .f-icon i{
-		color:#3498db;
+		color:#FFAA3B;
 	}
 
 
@@ -2698,9 +2701,13 @@ opacity: 0;
 	}
 
 	.open-map{
-		height: 500px;
-	}
+		height: 1300px;
+		overflow-y: scroll;
 
+	}
+	.textAlign{
+		text-align: justify;
+	}
 /* Open and Close Button Styles */
 
 	#map .google-map-big-button{
