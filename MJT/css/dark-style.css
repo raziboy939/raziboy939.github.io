@@ -1182,9 +1182,9 @@ opacity: 0;
 }
 #video{
 		width:100%;
-		min-height: 1000px;
+		min-height: 900px;
 		overflow: hidden;
-		background: url('../images/backgrounds/escapeImage.png') center center repeat-x ;
+		background: url('../images/backgrounds/escapeImage2.png') center center repeat-x ;
 		
 
 	}
@@ -2495,7 +2495,7 @@ opacity: 0;
 		margin-left:25px;
 		margin:0 auto;
 		left:50%;
-		margin-top:-88px;
+		margin-top: 100px;
 		z-index: 2;
 		text-align: center;
 		-webkit-transform: translateX(-50%);
@@ -2521,7 +2521,7 @@ opacity: 0;
 /* Text on Vide */
 
 	.video-button p.video-text{
-		font-size:40px;
+		font-size:28px;
 		border-left:2px solid white;
 		border-right:2px solid white;
 		padding:0 17px;
@@ -2529,11 +2529,11 @@ opacity: 0;
 		line-height: 30px;
 	}
 .video-button label.video-text{
-		font-size:40px;
+		font-size:32px;
 		border-left:2px solid white;
 		border-right:2px solid white;
 		padding:0 17px;
-		margin:50px auto 0;
+		margin:100px auto 0;
 		line-height: 30px;
 	}
 	.video-button label.video-text:hover{
@@ -2542,7 +2542,8 @@ opacity: 0;
 /* Video Button Rollover */
 
 	.video-button:hover{
-		background:rgba(0, 0, 0, 0.2);
+		background:rgba(201, 233, 247, 0.7);
+		border-radius: 70%;
 	}
 
 /* Pricing Tables */
@@ -2942,7 +2943,7 @@ opacity: 0;
 /* Footer */
 
 	.footer{
-		padding:20px;
+		padding:25px;
 		text-align: center;
 		background: #191919;
 	}
