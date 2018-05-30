@@ -1184,14 +1184,14 @@ opacity: 0;
 		width:100%;
 		min-height: 1000px;
 		overflow: hidden;
-		background: url('../images/backgrounds/bgWhiteBlack.png') center center repeat-x ;
+		background: url('../images/backgrounds/escapeImage.png') center center repeat-x ;
 		
 
 	}
 
 #team{
 		
-		background:url(../images/backgrounds/tranquilityFlipped.png)  fixed ;
+		background:url(../images/backgrounds/escape.png)  fixed ;
 		min-height: 720px;
 	}
 .middle{
