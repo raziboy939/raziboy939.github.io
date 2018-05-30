@@ -15,10 +15,10 @@
 /* Main Styles */
 
 	::selection {
-		background-color: #ececec;
+		background-color:#646770;
 	}
 	html, body {
-		background: #252525;
+		background: #646770;
 		
 		width:100%;
 		height:100%;
@@ -383,7 +383,10 @@
 	}
 
 	.dark-bg{
-		background-color:#000 !important;
+		background-color:#3E3E3E !important;
+	}
+	.clear-bg{
+		background-color:transparent; !important;
 	}
 
 	.black-bg{
@@ -1169,7 +1172,7 @@ opacity: 0;
 /* Services */
 #video-background-load{
 	
-	background: url('../images/backgrounds/bg.png') no-repeat center center ;
+	background: url('../images/backgrounds/bgWhite.png') no-repeat center center ;
 	width:100%;
 		height: 720px;
 		overflow: hidden;
@@ -1181,14 +1184,14 @@ opacity: 0;
 		width:100%;
 		min-height: 1000px;
 		overflow: hidden;
-		background: url('../images/backgrounds/bg.png') center center no-repeat ;
+		background: url('../images/backgrounds/bgWhiteBlack.png') center center repeat-x ;
 		
 
 	}
 
 #team{
 		
-		background:url(../images/backgrounds/values4.jpeg)  fixed ;
+		background:url(../images/backgrounds/tranquilityFlipped.png)  fixed ;
 		min-height: 720px;
 	}
 .middle{
@@ -1196,18 +1199,18 @@ opacity: 0;
 	margin-right: 5%;
 }
 #history{
-	background:url(../images/backgrounds/industryLight.jpg) no-repeat;
+	background:url(../images/backgrounds/industry.jpg) no-repeat;
 		
 		overflow: hidden;
 }
 
 	#services{
-		background:url(../images/backgrounds/about2.jpg) center center no-repeat ;
+		background:url(../images/backgrounds/about2.png) center center no-repeat ;
 		padding:55px 0;
 		overflow: hidden;
 	}
 	#features{
-		background:url(../images/backgrounds/iphone.jpg) no-repeat;
+		background:url(../images/backgrounds/iphone.png) no-repeat;
 		padding:55px 0;
 		overflow: hidden;
 	}
@@ -1273,10 +1276,10 @@ opacity: 0;
 	}
 
 	.tooltip-inner{
+		font-size: 18px;
 		padding:15px;
 		background:#494949;
 		color:white;
-		font-size:13px;
 		font-style: italic;
 		border-radius: 12px;
 		min-width: 170px;
@@ -2146,12 +2149,14 @@ opacity: 0;
 		background:url(../images/backgrounds/chart.png) no-repeat center center;
 		margin:0 auto;
 		min-height: 800px;
+		display: none;
 	}
 
 	.why-we{
-		
+		background:url(../images/backgrounds/tranquility.png) no-repeat center center;
 		margin:0 auto;
 		min-height: 900px;
+		display:none;
 
 	}
 
@@ -2359,10 +2364,10 @@ opacity: 0;
 /* Team Names, Descriptions */
 
 	.team-members .member-details .member-name{
-		color: white;
-		margin-top:0;
+		
+		margin-bottom: 25px;
 		padding-top:0;
-		font-size:30px;
+		
 	}
 
 	.team-members .member-details .member-position{
@@ -2384,7 +2389,7 @@ opacity: 0;
 	.member .member-details .member-details-inner .socials a{
 		display: inline-block;
 		color:white;
-		font-size:15px;
+		font-size:24px;
 		padding:4px;
 		width:25px;
 		background:transparent;
@@ -2687,6 +2692,7 @@ opacity: 0;
 /* Google Map */
 
 	#map{
+		display:none;
 		position: relative;
 		overflow: hidden;
 		-webkit-transition: all 0.7s;

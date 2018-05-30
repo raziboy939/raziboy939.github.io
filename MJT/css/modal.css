@@ -81,7 +81,7 @@ EDIT ON
   display: none;
 }
 .modal-container #modal-toggle.active ~ .modal-backdrop, .modal-container #modal-toggle:checked ~ .modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
   width: 100vw;
   height: 100vh;
   position: fixed;
