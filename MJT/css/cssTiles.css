@@ -5,7 +5,7 @@
 .tile2
 {
   width:1190px;
-  height:380px;
+  height:300px;
   margin:10px;
   background-color:#378DEE;
   display:inline-block;
@@ -40,8 +40,8 @@ font-size: 24px;
 }
 .tile2 h1
 {
- 
-  font-weight:300;
+  text-align: left;
+  font-weight:500;
   margin:0;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
@@ -84,7 +84,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 }
 .wrap
 {
-  margin:50px auto 0 auto;
+  margin:75px auto 0 auto;
   width:100%;
   display:flex;
   align-items:space-around;
@@ -93,7 +93,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 .tile
 {
   width:380px;
-  height:380px;
+  height:300px;
   margin:10px;
   background-color:#378DEE;
   display:inline-block;
@@ -142,7 +142,7 @@ text-align: left;
 {
   text-align: left;
  
-  font-weight:300;
+  font-weight:400;
   margin:0;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }

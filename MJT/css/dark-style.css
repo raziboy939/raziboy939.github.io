@@ -186,6 +186,16 @@
 		padding: 75px 0;
 		text-align: center;
 	}
+	.inner-center{
+		padding-left: 75px;
+		width:100%;
+		height: auto;
+		max-width: 1170px;
+		position: relative;
+		margin: 0 auto;
+		padding: 75px 0;
+		text-align: center;
+	}
 
 	.inner-not-center{
 
