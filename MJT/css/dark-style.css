@@ -187,6 +187,20 @@
 		text-align: center;
 	}
 
+	.inner-not-center{
+
+		width:100%;
+		height: auto;
+		max-width: 1170px;
+		position: relative;
+		margin: 0 auto;
+		padding: 75px 0;
+		padding-left: 75px;
+		padding-right: 75px;
+		
+	
+	}
+
 	.inner:after{
 		clear: both;
 	}
@@ -918,6 +932,8 @@ opacity: 0;
 		transform: translateY(-50%);
 	}
 
+
+
 	.site-logo a.logo{
 		display: block;
 	}
@@ -925,6 +941,31 @@ opacity: 0;
 	.site-logo a.logo img{
 		height: auto;
 		max-height: 50px;
+		-webkit-transition: all 1s;
+		-moz-transition: all 1s;
+		transition: all 1s;
+	}
+
+
+	.bottom-logo{
+		
+		position: relative;
+	
+		
+	}
+
+	
+
+	.bottom-logo a.logo{
+		display: block;
+	}
+
+	.bottom-logo a.logo img{
+		margin-top:50px;
+		width: auto;
+		height: auto;
+		max-height: 500px;
+		max-width: 300px;
 		-webkit-transition: all 1s;
 		-moz-transition: all 1s;
 		transition: all 1s;
@@ -1276,7 +1317,7 @@ opacity: 0;
 	}
 
 	.tooltip-inner{
-		font-size: 18px;
+		font-size: 16px;
 		padding:15px;
 		background:#494949;
 		color:white;
@@ -2389,9 +2430,9 @@ opacity: 0;
 	.member .member-details .member-details-inner .socials a{
 		display: inline-block;
 		color:white;
-		font-size:24px;
-		padding:4px;
-		width:25px;
+		font-size:32px;
+		padding:5px;
+		width:40px;
 		background:transparent;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
@@ -2536,14 +2577,18 @@ opacity: 0;
 		margin:100px auto 0;
 		line-height: 30px;
 	}
+
+	.video-button label.video-text:hover{
+		font-size:40px;
+	}
 	.video-button label.video-text:hover{
 		cursor: pointer;
 	}
 /* Video Button Rollover */
 
 	.video-button:hover{
-		background:rgba(201, 233, 247, 0.7);
-		border-radius: 70%;
+		
+		/*border-radius: 70%;*/
 	}
 
 /* Pricing Tables */
@@ -2887,6 +2932,24 @@ opacity: 0;
 	}
 
 /* Site Socials and Address */
+#site-socials{
+	
+	width:100%;
+	height: auto;
+	 display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+	
+
+}
+#site-socials .inner{
+padding-left:30px;
+padding-right:30px;
+}
+.justify{
+	text-align: justify;
+}
 
 	#site-socials .socials{
 		width:100%;
