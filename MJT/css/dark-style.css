@@ -113,7 +113,9 @@
 	.visible{
 		visibility:visible;
 	}
-
+	.justify{
+		text-align: justify;
+	}
 /* Background Animation */
 
 	@-webkit-keyframes BackgroundAnimation {
@@ -1266,7 +1268,7 @@ opacity: 0;
 		overflow: hidden;
 	}
 	#about{
-		background:url(../images/backgrounds/services1.jpg) center no-repeat ;
+		background:url(../images/backgrounds/services1.png) center no-repeat ;
 
 		padding:2px 0;
 		overflow: hidden;
@@ -2381,7 +2383,7 @@ opacity: 0;
 	.team-members .member a.team-image{
 		display: block;
 		width: 100%;
-		height: auto;
+		height: 240px;
 		z-index: 2;
 	}
 
@@ -2416,7 +2418,7 @@ opacity: 0;
 
 	.team-members .member-details .member-name{
 		
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 		padding-top:0;
 		
 	}
@@ -2440,7 +2442,7 @@ opacity: 0;
 	.member .member-details .member-details-inner .socials a{
 		display: inline-block;
 		color:white;
-		font-size:32px;
+		font-size:20px;
 		padding:5px;
 		width:40px;
 		background:transparent;
@@ -2589,7 +2591,7 @@ opacity: 0;
 	}
 
 	.video-button label.video-text:hover{
-		font-size:40px;
+		background-color:rgba(0,0,0,0.8);
 	}
 	.video-button label.video-text:hover{
 		cursor: pointer;
@@ -2748,7 +2750,7 @@ opacity: 0;
 /* Google Map */
 
 	#map{
-		display:none;
+		
 		position: relative;
 		overflow: hidden;
 		-webkit-transition: all 0.7s;
@@ -2763,7 +2765,7 @@ opacity: 0;
 	}
 
 	.open-map{
-		height: 1300px;
+		height: 500px;
 		overflow-y: scroll;
 
 	}
