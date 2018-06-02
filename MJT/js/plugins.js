@@ -233,10 +233,13 @@ $(document).ready(function () {
         var z = $('.waypoint').offset().top - 200;
 
         if (y >= z) {
+
             menu.removeClass('not-visible-nav').addClass('visible-nav');
+
         }
         else{
             menu.removeClass('visible-nav').addClass('not-visible-nav');
+             console.log("got here");
         }
     });
 
@@ -786,7 +789,7 @@ $(document).ready(function() {
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#03fdfe"
+                "color": "#1ed2ff"
             },
             {
                 "lightness": "0"
@@ -825,7 +828,7 @@ $(document).ready(function() {
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#03fdfe"
+                "color": "#1ed2ff"
             }
         ]
     },
@@ -834,7 +837,7 @@ $(document).ready(function() {
         "elementType": "labels.text.fill",
         "stylers": [
             {
-                "color": "#03fdfe"
+                "color": "#1ed2ff"
             }
         ]
     },
@@ -882,7 +885,7 @@ $(document).ready(function() {
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#03fdfe"
+                "color": "#1ed2ff"
             },
             {
                 "lightness": 16
@@ -926,6 +929,8 @@ $(document).ready(function() {
 			};
 
 			var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
+			var infowindow = null;
+
 
 			// Marker Image
 			var seattleMarker = 'images/maps/seattle-Atom.png';
@@ -938,6 +943,20 @@ $(document).ready(function() {
 		  	// First Marker Coordination
 			
 			var myLatlng = new google.maps.LatLng(37.792922,-122.404737);
+
+			map.addListener('drag', function() {
+          // 3 seconds after the center of the map has changed, pan back to the
+          // marker.
+          window.setTimeout(function() {
+
+          	map.setZoom(3);
+          	if (infowindow) {
+        		infowindow.close();
+    		}
+    		infowindow = new google.maps.InfoWindow();
+           map.setCenter(latlng);
+          }, 1000);
+        });
 
 			// Your Texts 
 
@@ -964,12 +983,15 @@ $(document).ready(function() {
 			  });
 
 
-			var infowindow = new google.maps.InfoWindow({
-			  content: contentString
-			  });
+			
 
 			  
 			 google.maps.event.addListener(marker, 'click', function() {
+			 	 infowindow = new google.maps.InfoWindow({
+			  content: contentString
+			  });
+			 	 map.setZoom(14);
+          map.setCenter(marker.getPosition());
 				infowindow.open(map,marker);
 			  });
 
@@ -1001,9 +1023,7 @@ $(document).ready(function() {
 			  '</p>'+
 			  '</div>';
 
-			  var infowindowSecond = new google.maps.InfoWindow({
-				  content: contentStringSecond,
-				  });
+			 
 
 			 var markerSecond = new google.maps.Marker({
 				  position: myLatlngSecond,
@@ -1013,7 +1033,13 @@ $(document).ready(function() {
 			  });
 
 			 google.maps.event.addListener(markerSecond, 'click', function() {
-				infowindowSecond.open(map,markerSecond);
+			 	  infowindow = new google.maps.InfoWindow({
+				  content: contentStringSecond,
+				  });
+			 	map.setZoom(14);
+          		map.setCenter(markerSecond.getPosition());
+				infowindow.open(map,markerSecond);
+				
 			  });
 
 			 /* ========= End Second Marker ========= */
@@ -1039,9 +1065,7 @@ $(document).ready(function() {
 			  '</p>'+
 			  '</div>';
 
-			  var infowindowThird = new google.maps.InfoWindow({
-				  content: contentStringThird,
-				  });
+			  
 
 			 var markerThird = new google.maps.Marker({
 				  position: myLatlngThird,
@@ -1051,7 +1075,12 @@ $(document).ready(function() {
 			  });
 
 			 google.maps.event.addListener(markerThird, 'click', function() {
-				infowindowThird.open(map,markerThird);
+			 	 infowindow = new google.maps.InfoWindow({
+				  content: contentStringThird,
+				  });
+				map.setZoom(14);
+          		map.setCenter(markerThird.getPosition());
+				infowindow.open(map,markerThird);
 			  });
 
 			 /* ========= End Second Marker ========= */
@@ -1079,9 +1108,7 @@ $(document).ready(function() {
 			  '</p>'+
 			  '</div>';
 
-			  var infowindowFourth = new google.maps.InfoWindow({
-				  content: contentStringFourth,
-				  });
+			 
 
 			 var markerFourth = new google.maps.Marker({
 				  position: myLatlngFourth,
@@ -1091,7 +1118,12 @@ $(document).ready(function() {
 			  });
 
 			 google.maps.event.addListener(markerFourth, 'click', function() {
-				infowindowFourth.open(map,markerFourth);
+			 	  infowindow = new google.maps.InfoWindow({
+				  content: contentStringFourth,
+				  });
+				map.setZoom(14);
+          		map.setCenter(markerFourth.getPosition());
+				infowindow.open(map,markerFourth);
 			  });
 
 			 /* ========= End Second Marker ========= */
