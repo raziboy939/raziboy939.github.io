@@ -928,10 +928,10 @@ $(document).ready(function() {
 			var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
 
 			// Marker Image
-			var seattleMarker = 'images/maps/seattle.png';
-			var nyMarker = 'images/maps/nyc.png';
-			var sfMarker = 'images/maps/sf.png';
-			var shanghaiMarker = 'images/maps/shanghai.png';
+			var seattleMarker = 'images/maps/seattle-Atom.png';
+			var nyMarker = 'images/maps/nyc-Atom.png';
+			var sfMarker = 'images/maps/sf-Atom.png';
+			var shanghaiMarker = 'images/maps/shanghai-Atom.png';
 			
 		  	/* ========= First Marker ========= */
 

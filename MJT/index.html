@@ -48,11 +48,7 @@
 		<div class="loader-item fa fa-spin colored-border"></div>
 	</section>
 
-	<section id="fixed_video">
-		<!-- Video -->
-		<div id="P2" class="player video-container" data-property="{videoURL:'https://www.youtube.com/watch?v=zSUtUG3y3b4',containment:'#fixed_video',autoPlay:true, showControls:false, mute:true, startAt:0, opacity:1}"></div>
-		<!-- End Video -->
-	</section>
+	
 
 
 	<!-- Navigation -->
@@ -70,12 +66,15 @@
 			<!-- Navigation Menu -->
 			<div class="nav-menu">
 				<ul class="nav uppercase condensed bold">
-					
-					<li><a href="#about" >about us</a></li>
-					<li><a href="#services" class="scroll">services</a></li>
-					<li><a href="#features" class="scroll">Our Values</a></li>
+					<li><a href="#services" class="scroll">Services</a></li>
 					<li><a href="#history" class="scroll">Expertise</a></li>
-					<li><a href="#video" class="scroll">Submit Resume</a></li>
+					<li><a href="#team" >Who we are</a></li>
+					
+					<li><a href="#features" class="scroll">Our Values</a></li>
+					
+					<li><a href="#video" class="scroll">Job Seekers</a></li>
+					<li><a href="#video2" class="scroll">Employers</a></li>
+					<li><a href="#team" >Contact</a></li>
 					
 					
 					
@@ -94,7 +93,7 @@
 
 	<!-- Home Section -->
 	<section id="home"> 	
-		<div id="slides" class="home pattern">
+		<div id="slides" class="home backgroundLoad pattern" data-animation="fadeIn" data-animation-delay="700">
 			<div class="home-details visible">
 				
 				<div class="hometexts-1">
@@ -134,11 +133,12 @@
 				Bottom Arrow
 				<a href="#about" class="black-bg home-button scroll uppercase semibold  ">
 					Read More -->
-				</a>
+				
 			</div>
 
-			</div><!-- End Home Texts -->
+			
 		</div><!-- End Home Details -->
+	</div>
 	</section><!-- End Home Section -->
 
 
@@ -147,7 +147,7 @@
 
 
 	<!-- About -->
-	<section id="about" class="container parallax1 white-bg waypoint">
+	<section id="services" class="container parallax1 white-bg waypoint">
 		<div class="inner">
 			<!-- Header -->
 				<h1 class="header light  blue">We Deliver Results. Better. Faster.</h1>
@@ -157,6 +157,8 @@
 
 
 			</h3>
+
+			<h1 class="header light margin blue">How we do it</h1>
 			<!-- Boxes -->
 			<div class="boxes black">
 
@@ -205,7 +207,7 @@
 <!--  -->
 
 
-
+<div id='video-container'>
 
 	<!-- Services -->
 	<section id="services" class="container white-bg parallax1 ">
@@ -213,7 +215,7 @@
 		<div class="inner">
 
 			<!-- Header -->
-				<h1 class="header light blue">Services Offered</h1>
+				<h1 class="header light blue">Our Services</h1>
 
 			<!-- Description -->
 			<h3 class=" black">At My Job Tank, we focus on three lines of business in order to identify, target, and meet the needs of our clients with accuracy and efficiency.
@@ -225,7 +227,7 @@ We’ve separated our services to individually address the goals of each client 
 			<div class="service-boxes">
 
 				<!-- Box 1 -->
-				<div class="col-xs-4 service-box animated" data-animation="fadeIn" data-animation-delay="200" data-toggle="tooltip" data-placement="top" title="Staff Augmentation Contract to Hire">
+				<div class="col-xs-3 service-box animated" data-animation="fadeIn" data-animation-delay="200" data-toggle="tooltip" data-placement="top" title="Staff Augmentation Contract to Hire">
 					<!-- Icon -->
 					<a class="service-icon">
 						<i class="fas fa-clipboard-list orange"></i>
@@ -236,8 +238,8 @@ We’ve separated our services to individually address the goals of each client 
 
 
 				<!-- Box 2 -->
-				<div class="col-xs-4 service-box animated" data-animation="fadeIn" data-animation-delay="200" data-toggle="tooltip" data-placement="top" title="Statement of Work
-Project Based Consulting ">
+				<div class="col-xs-3 service-box animated" data-animation="fadeIn" data-animation-delay="200" data-toggle="tooltip" data-placement="top" title="Statement of Work
+					Project Based Consulting ">
 					<!-- Icon -->
 					<a class="service-icon">
 						<i class="far fa-address-book orange"></i>
@@ -248,8 +250,8 @@ Project Based Consulting ">
 
 
 				<!-- Box 3 -->
-				<div class="col-xs-4 service-box animated" data-animation="fadeIn" data-animation-delay="200" data-toggle="tooltip" data-placement="top" title="Contingent Search
-Retained Search">
+				<div class="col-xs-3 service-box animated" data-animation="fadeIn" data-animation-delay="200" data-toggle="tooltip" data-placement="top" title="Contingent Search
+					Retained Search">
 					<!-- Icon -->
 					<a class="service-icon">
 						<i class="fas fa-search orange"></i>
@@ -257,6 +259,16 @@ Retained Search">
 					<!-- Header -->
 					<p class="service-header light black">Direct Hire</p>
 				</div>
+
+				<div class="col-xs-3 service-box animated" data-animation="fadeIn" data-animation-delay="200" data-toggle="tooltip" data-placement="top" title="Internship opportunites for Top STEM Students and Graduates">
+					<!-- Icon -->
+					<a class="service-icon">
+						<i class="fas fa-clipboard-list orange"></i>
+					</a>
+					<!-- Header -->
+					<p class="service-header light black">Internship Programs</p>
+				</div>
+
 
 
 	
@@ -273,134 +285,7 @@ Retained Search">
 
 
 	<!-- Features -->
-	<section id="features" class="container  parallax1">
-
-		<div class="inner">
-
-			<!-- Header -->
-				<h1 class="header light blue"><span >Our Values</span></h1>
-
-
-
-			<!-- Description -->
-			<h3 class=" black">Our core values are embodied by our team members and fuel our approach to delighting every client we serve.
-
- </h3>
-
-			<div class="features-boxes black middle">
-
-				<!-- Box 1 -->
-				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="0">
-					<!-- Icon -->
-					<a class="f-icon orange">
-						<i class="fa fa-thumbs-up"></i>
-					</a>
-					<!-- Header -->
-					<p class="feature-head uppercase black">Superior customer service</p>
-					<!-- Text -->
-					
-				</div>
-
-
-				<!-- Box 2 -->
-				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="100">
-					<!-- Icon -->
-					<a class="f-icon orange">
-						<i class="fab fa-staylinked"></i>
-					</a>
-					<!-- Header -->
-					<p class="feature-head uppercase black">Integrity</p>
-					<!-- Text -->
-					
-				</div>
-
-
-				<!-- Box 3 -->
-				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="200">
-					<!-- Icon -->
-					<a class="f-icon orange">
-						<i class="fas fa-handshake"></i>
-					</a>
-					<!-- Header -->
-					<p class="feature-head uppercase black">Gratitude and respect</p>
-					<!-- Text -->
-					
-				</div>
-
-
-				<!-- Box 4 -->
-				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="300">
-					<!-- Icon -->
-					<a class="f-icon orange">
-						<i class="fas fa-rocket"></i>
-					</a>
-					<!-- Header -->
-					<p class="feature-head uppercase black">Change in the lives of those we serve</p>
-					<!-- Text -->
-					
-				</div>
-
-
-				<!-- Box 5 -->
-				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="400">
-					<!-- Icon -->
-					<a class="f-icon orange">
-						<i class="fas fa-hand-holding-heart"></i>
-					</a>
-					<!-- Header -->
-					<p class="feature-head uppercase black">Commitment to charities and our communities</p>
-					<!-- Text -->
-					
-				</div>
-
-
-				<!-- Box 6 -->
-				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="500">
-					<!-- Icon -->
-					<a class="f-icon orange">
-						<i class="fas fa-people-carry"></i>
-					</a>
-					<!-- Header -->
-					<p class="feature-head uppercase black">International collaboration</p>
-					<!-- Text -->
-					
-				</div>
-
-				<!-- Box 7 -->
-				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="500">
-					<!-- Icon -->
-					<a class="f-icon orange">
-						<i class="fab fa-connectdevelop"></i>
-					</a>
-					<!-- Header -->
-					<p class="feature-head uppercase black">Strength in Diversity</p>
-					<!-- Text -->
-					
-				</div>
-
-				<!-- Box 6 -->
-				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="500">
-					<!-- Icon -->
-					<a class="f-icon orange">
-						<i class="fas fa-gamepad"></i>
-					</a>
-					<!-- Header -->
-					<p class="feature-head uppercase black">Fun along the way</p>
-					<!-- Text -->
-					
-				</div>
-				
-				
-
-
-				
-
-			</div><!-- End Features Boxes -->
-
-		</div> <!-- End Features Inner -->
-
-	</section><!-- End Features Section -->
-
+	
 
 
 
@@ -409,10 +294,10 @@ Retained Search">
 
 
 	<!-- History -->
-	<section id="history" class="container   ">
+	<section id="history" class="container  white-bg ">
 		<div class="inner animated"  >
 		<!-- Header -->
-				<h1 class="header light blue">Expertise</h1>
+				<h1 class="header light blue">Our Areas of Expertise</h1>
 
 			<!-- Description -->
 			<h3 class=" black">We focus on pipelining elite talent for in demand skill sets such as: </h3>
@@ -563,6 +448,133 @@ Retained Search">
 
 	</div>
 	</section><!-- End History Section -->
+<section id="features" class="container white-bg  parallax1">
+
+		<div class="inner">
+
+			<!-- Header -->
+				<h1 class="header light blue"><span >Our Values</span></h1>
+
+
+
+			<!-- Description -->
+			<h3 class=" black">Our core values are embodied by our team members and fuel our approach to delighting every client we serve.
+
+ </h3>
+
+			<div class="features-boxes black middle">
+
+				<!-- Box 1 -->
+				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="0">
+					<!-- Icon -->
+					<a class="f-icon orange">
+						<i class="fa fa-thumbs-up"></i>
+					</a>
+					<!-- Header -->
+					<p class="feature-head uppercase black">Superior customer service</p>
+					<!-- Text -->
+					
+				</div>
+
+
+				<!-- Box 2 -->
+				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="100">
+					<!-- Icon -->
+					<a class="f-icon orange">
+						<i class="fab fa-staylinked"></i>
+					</a>
+					<!-- Header -->
+					<p class="feature-head uppercase black">Integrity</p>
+					<!-- Text -->
+					
+				</div>
+
+
+				<!-- Box 3 -->
+				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="200">
+					<!-- Icon -->
+					<a class="f-icon orange">
+						<i class="fas fa-handshake"></i>
+					</a>
+					<!-- Header -->
+					<p class="feature-head uppercase black">Gratitude and respect</p>
+					<!-- Text -->
+					
+				</div>
+
+
+				<!-- Box 4 -->
+				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="300">
+					<!-- Icon -->
+					<a class="f-icon orange">
+						<i class="fas fa-rocket"></i>
+					</a>
+					<!-- Header -->
+					<p class="feature-head uppercase black">Change in the lives of those we serve</p>
+					<!-- Text -->
+					
+				</div>
+
+
+				<!-- Box 5 -->
+				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="400">
+					<!-- Icon -->
+					<a class="f-icon orange">
+						<i class="fas fa-hand-holding-heart"></i>
+					</a>
+					<!-- Header -->
+					<p class="feature-head uppercase black">Commitment to charities and our communities</p>
+					<!-- Text -->
+					
+				</div>
+
+
+				<!-- Box 6 -->
+				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="500">
+					<!-- Icon -->
+					<a class="f-icon orange">
+						<i class="fas fa-people-carry"></i>
+					</a>
+					<!-- Header -->
+					<p class="feature-head uppercase black">International collaboration</p>
+					<!-- Text -->
+					
+				</div>
+
+				<!-- Box 7 -->
+				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="500">
+					<!-- Icon -->
+					<a class="f-icon orange">
+						<i class="fab fa-connectdevelop"></i>
+					</a>
+					<!-- Header -->
+					<p class="feature-head uppercase black">Strength in Diversity</p>
+					<!-- Text -->
+					
+				</div>
+
+				<!-- Box 6 -->
+				<div class="col-xs-3 f-box animated" data-animation="fadeIn" data-animation-delay="500">
+					<!-- Icon -->
+					<a class="f-icon orange">
+						<i class="fas fa-gamepad"></i>
+					</a>
+					<!-- Header -->
+					<p class="feature-head uppercase black">Fun along the way</p>
+					<!-- Text -->
+					
+				</div>
+				
+				
+
+
+				
+
+			</div><!-- End Features Boxes -->
+
+		</div> <!-- End Features Inner -->
+
+	</section><!-- End Features Section -->
 
 
 
@@ -597,7 +609,7 @@ Retained Search">
 
 
 	<!-- Team -->
-	<section id="team" class="container dark-bg">
+	<section id="team" class="container white-bg">
 
 		<!-- Team Inner -->
 		<div class="inner team">
@@ -606,9 +618,9 @@ Retained Search">
 			<h1 class="header light  blue">Our Executive Team</h1>
 
 			<!-- Description -->
-			<h3 class=" white">With over 100 years of combined experience in the staffing industry, our executive team values superior customer and client service above all else. Our aim is to delight both our clients and candidates with the highest level of focused, personalized service possible.</h3>
+			<h3 class=" black">With over 100 years of combined experience in the staffing industry, our executive team values superior customer and client service above all else. Our aim is to delight both our clients and candidates with the highest level of focused, personalized service possible.</h3>
 
-			<h3 class=" white"> Let us help you actualize your upcoming project or long-term technology initiatives 
+			<h3 class=" black"> Let us help you actualize your upcoming project or long-term technology initiatives 
 				with the right high-skilled technical talent. </h3>
 
 				<h2 class="header light  blue">Contact Us Today</h2>
@@ -774,45 +786,147 @@ Retained Search">
 	</section><!-- End Team Section -->
 
 
+</div>
+
+
+
+<!-- section id="fixed_video">
 
 	
-
-
-
+</section> -->
 	<!-- Video -->
-	<section id="video" class="video  relative animated  " data-animation="fadeInLeft" data-animation-delay="700">
+
+	<section id="vid_container">
+
+		<!-- <div id="P2" class="player video-container" data-property="{videoURL:'https://www.youtube.com/watch?v=1IkY0_qONRk',containment:'#vid_container',allowFullScreen:false,autoPlay:true, showControls:false, mute:true, startAt:0, opacity:.7}"></div> -->
+	<section id="video" class="video  relative animated semi-white-bg  " data-animation="fadeInLeft" data-animation-delay="700">
 
 		
 
-		<!-- Video Button -->
-		<span  class="video-button t-center " >
+		
+	<div class=" center-of-page">
+		<div class="row ">
+			<div class="col-xs-3 ">
+			</div>
+			<div class="col-xs-6  center-text">
+				<h1 class="header light  blue">Talent,  Meet  Your  Opportunity.</h1>
+				<!-- Description -->
+				<h3 class="  white">We  invest  in  our  clients’  success. <br> <br> We  will  partner  with  you  to  create  a  long-term  strategy  to  an  exciting,  successful  career  with  today’s  fast-moving  companies.  Have  a  conversation  with  us  today  about  your  career  goals  and  where  you’d  like  to  be.  We  can  help  define  your  market  value  and  advise  you  on  your  next  big  move. <br><br>
+					
+
+
+				</h3>
+
+				<span  class="video-button t-center " >
+
 			<!-- Logo Span -->
 			
 			<!-- Video Text -->
-			<label video-text  condensed bold white class="modal-btn video-text  condensed bold white" for="modal-toggle">
+
+
+
+			<label  class="modal-btn video-text  condensed bold white" for="modal-toggle">
 				Submit your Resume
 			</label>
 
 
- <div class="modal-container">
-  <input id="modal-toggle" type="checkbox">
-  <label class="modal-backdrop" for="modal-toggle"></label>
-  <div class="modal-content">
-    <label class="modal-close" for="modal-toggle">&#x2715;</label>
-    <h1>Stay Tuned...</h1>
-    <h3>We will allow Resume submissions soon!</h3> 
-    <label class="modal-content-btn" for="modal-toggle">OK</label>   
-  </div>          
-</div>  
+			 <div class="modal-container">
+			  <input id="modal-toggle" type="checkbox">
+			  <label class="modal-backdrop" for="modal-toggle"></label>
+			  <div class="modal-content">
+			    <label class="modal-close" for="modal-toggle">&#x2715;</label>
+			    <h1>Stay Tuned...</h1>
+			    <h3>We will allow Resume submissions soon!</h3> 
+			    <label class="modal-content-btn" for="modal-toggle">OK</label>   
+			  </div>          
+			</div>  
     
 	
 		</span>
+			</div>
+			<div class="col-xs-3 ">
+			</div>
+		</div>
+
+		
+
+
+		<!-- Video Button -->
+		
+	</div>
 
     
 
 
 	</section><!-- End Video Section -->
 
+	
+
+	<section id="video2" class="video  relative animated semi-white-bg  " data-animation="fadeInLeft" data-animation-delay="700">
+
+		
+
+		
+	<div class=" center-of-page">
+		<div class="row ">
+			<div class="col-xs-3 ">
+			</div>
+			<div class="col-xs-6  center-text">
+				<h1 class="header light  blue">Employers,  Meet  Your  Match.</h1>
+				<!-- Description -->
+				<h3 class="  white">As  a  leader  of  technology  initiatives,  your  projects  and  outcomes  are  critically  dependent  on  accessing  and  having  highly-skilled  players  on  your  team.   <br> <br> MJT  is  well-placed  to  harness  highly  competitive  and  elusive  talent  markets  in  the  most  important  tech  hubs  in  the  US  and  in  China<br><br>Using  our  proprietary  AI/ML  platform,  we  deliver  efficient,  speedy  matching  results  and  customized  solutions  to  address  your  specific  business  issues.   <br><br>
+					
+
+
+				</h3>
+
+				<span  class="video-button t-center " >
+
+			<!-- Logo Span -->
+			
+			<!-- Video Text -->
+
+
+
+			<label  class="modal-btn video-text  condensed bold white" for="modal-toggle">
+				Contact Us
+			</label>
+
+
+			 <div class="modal-container">
+			  <input id="modal-toggle" type="checkbox">
+			  <label class="modal-backdrop" for="modal-toggle"></label>
+			  <div class="modal-content">
+			    <label class="modal-close" for="modal-toggle">&#x2715;</label>
+			    <h1>Stay Tuned...</h1>
+			    <h3>We will allow Resume submissions soon!</h3> 
+			    <label class="modal-content-btn" for="modal-toggle">OK</label>   
+			  </div>          
+			</div>  
+    
+	
+		</span>
+			</div>
+			<div class="col-xs-3 ">
+			</div>
+		</div>
+
+		
+
+
+		<!-- Video Button -->
+		
+	</div>
+
+    
+
+
+	</section><!-- End Video Section -->
+
+
+
+
+</section>
 
 
 
@@ -835,7 +949,7 @@ Retained Search">
 
 
 	<!-- Site Socials and Address -->
-	<section id="site-socials" class=" clear-bg">
+	<section id="site-socials" class=" black-bg">
 		<div class="site-socials inner-not-center ">
 			<div class="row">
 
@@ -856,20 +970,20 @@ Retained Search">
 			</div>	
 			<div class="row">
 				<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
-					<h3 class="uppercase white">San Francisco </h3>
+					<h3 class="uppercase blue">San Francisco </h3>
 					<h4 class="justify white"> 600 California Street, <br>12th floor @WeWork<br>San Francisco <br>CA 94108</h4>
 				</div>
 				<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
-					<h3 class="uppercase white">New York City </h3>
+					<h3 class="uppercase blue">New York City </h3>
 					<h4 class="justify white"> 1460 Broadway,<br> 5th floor  <br>New York<br> NY 10036</h4>
 
 				</div>
 				<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
-					<h3 class="uppercase white">Seattle </h3>
+					<h3 class="uppercase blue">Seattle </h3>
 					<h4 class="justify white"> 12402 SE 38thStreet,<br> Suite 205 <br>Bellevue<br> WA 98006 </h4>
 				</div>
 				<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
-					<h3 class="uppercase white">Shanghai </h3>
+					<h3 class="uppercase blue">Shanghai </h3>
 					<h4 class="justify white"> No.468 Nanjing West<br> Road, Jing'an District,   <br>Shanghai, <br> People's Republic of <br> China</h4>
 				</div>
 				
@@ -896,6 +1010,35 @@ Retained Search">
 
 	<!-- Footer -->
 	<footer class="footer animated"  data-animation="fadeIn" data-animation-delay="50">
+
+
+		<div class="row">
+				<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
+					
+					
+				</div>
+
+				<div class="col-xs-6 animated" data-animation="fadeIn" data-animation-delay="300">
+					
+					<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
+					<a href="#team"> <h4 class="uppercase white">Contact Us </h4> </a>
+					</div>
+					<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
+					<a href="#team"><h4 class="uppercase white">Careers</h4> </a>
+					</div>
+					<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
+					<a href=""><h4 class="uppercase white">Twitter </h4></a>
+					</div>
+					<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
+					<a href=""><h4 class="uppercase white">LinkedIn </h4> </a>
+					</div>
+					
+				</div>
+				<div class="col-xs-3 animated" data-animation="fadeIn" data-animation-delay="300">
+					
+					
+				</div>
+			</div>
 		<!-- Your Company Name -->
 		
 		<!-- Copyright -->
@@ -947,7 +1090,7 @@ $(document).ready(function() {
   $('.fadeIn1').on('webkitAnimationEnd', function(e) {
     $(this).addClass('visible');
 
-    $('.home').addClass('backgroundLoad');
+   // $('.home').addClass('backgroundLoad');
 
 
     
