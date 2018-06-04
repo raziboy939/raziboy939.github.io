@@ -2425,15 +2425,17 @@ opacity: 0;
 	.team-members .member a.team-image{
 		display: block;
 		width: 100%;
-		height: 240px;
+		
 		z-index: 2;
 	}
 
 	.team-members .member a.team-image img{
 		width: 100%;
+		height: 240px;
 	}
 
 	.inner-details .member-details{
+		opacity:0;
 		position: absolute;
 		width: 100%;
 		left:0;
@@ -2496,6 +2498,7 @@ opacity: 0;
 /* Team Rollover */
 
 	.team-members .member:hover .member-details{
+		opacity:1;
 		top:0;
 	}
 
