@@ -2413,6 +2413,7 @@ opacity: 0;
 	}
 
 	.team-members .member{
+		background: white;
 		margin:15px auto;
 		cursor: default;
 		overflow: hidden;
