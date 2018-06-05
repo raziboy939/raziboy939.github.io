@@ -2935,6 +2935,9 @@ opacity: 0;
 		opacity: 1;
 		margin:25px auto 0;
 	}
+	.hidden{
+		display:none;
+	}
 
 /* Input Styles */
 
