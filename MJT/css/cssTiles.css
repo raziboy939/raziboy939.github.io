@@ -14,10 +14,10 @@
   cursor:pointer;
   transition: all 0.2s ease-out;
   box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
-  
+
   color:white;
   font-family: 'Open Sans', sans-serif;
-  
+
 }
 
 .tile2 img
@@ -54,7 +54,7 @@ font-size: 24px;
 }
 .tile2 p
 {
-  font-size: 32;
+  font-size: 17px;
   font-weight:300;
   margin:20px 0 0 0;
   line-height: 30px;
@@ -105,7 +105,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
   overflow:hidden;
   color:white;
   font-family: 'Open Sans', sans-serif;
-  
+
 }
 
 .tile img
@@ -127,7 +127,7 @@ font-weight:200;
   text-justify: inter-word;
   position:absolute;
   padding:20px;
- 
+
 }
 .tile .textlarge
 {
@@ -135,13 +135,13 @@ font-weight:200;
 text-align: left;
 
   position:relative;
-  
+
   height:calc(100% - 60px);
 }
 .tile h1
 {
   text-align: left;
- 
+
   font-weight:00;
   margin:0;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
@@ -199,7 +199,7 @@ height:440px;
   flex-direction:column;
   align-items:center;
   justify-content:space-around;
-  
+
 }
 
 .dots span
@@ -212,7 +212,7 @@ height:440px;
   opacity:0;
   transition: transform 0.2s ease-out, opacity 0.2s ease;
   transform: translateY(30px);
- 
+
 }
 
 .tile:hover span
@@ -238,6 +238,43 @@ height:440px;
 @media (max-width: 1000px) {
   .wrap {
    flex-direction: column;
-    width:400px;
+    width:360px;
+  }
+  .tile2{
+    width: 340px;
+    height: 600px;
+  }
+  .tile{
+    width:340px;
+
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* .wrap {
+    width:360px;
+  }
+  .tile{
+    width:340px;
+
+  } */
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .location{
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .location{
+    text-align: left;
   }
 }

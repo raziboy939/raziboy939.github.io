@@ -1,6 +1,9 @@
 
 /* MIN 1920px */
-
+.hometexts-1{
+	font-size:36px;
+	line-height: 36px;
+}
 @media only screen and (min-width: 1920px){
 
 	.slides-container div,
@@ -153,12 +156,12 @@
 
 	.slides-container div,
 	.home{
-		background-size:auto 100%;
+		background-size:auto 30% !important;
 	}
 
 	.hometexts-1{
-		font-size:65px;
-		line-height: 75px;
+		font-size:36px;
+		line-height: 36px;
 	}
 
 	.hometext{
@@ -350,8 +353,8 @@
 @media only screen and (max-width: 640px){
 
 	.hometexts-1{
-		font-size:45px;
-		line-height: 55px;
+		font-size:36px;
+		line-height: 36px;
 	}
 
 	.post-dates{
@@ -368,10 +371,12 @@
 /* MAX 480px */
 
 @media only screen and (max-width: 480px){
-
+	#video, #video2{
+		display: none;
+	}
 	.slides-container div,
 	.home{
-		background-size:auto 700px;
+		background-size:auto 215px !important;
 	}
 
 	#home .v2 .typographic{
@@ -388,8 +393,8 @@
 	}
 
 	.hometexts-1{
-		font-size:40px;
-		line-height: 45px;
+		font-size:24px;
+		line-height: 24px;
 	}
 
 	#home .v5 .typographic .hometexts-5 ul li{
