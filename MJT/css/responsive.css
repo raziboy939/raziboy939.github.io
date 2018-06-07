@@ -371,9 +371,10 @@
 /* MAX 480px */
 
 @media only screen and (max-width: 480px){
-	#video, #video2{
+	#fixed_video{
 		display: none;
 	}
+
 	.slides-container div,
 	.home{
 		background-size:auto 215px !important;
