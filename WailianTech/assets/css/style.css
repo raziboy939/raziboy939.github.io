@@ -275,8 +275,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #0074BB;}
 
 
 .about {padding: 50px 0 100px;}
+h3.h3widthshort{
+    max-width:135px;
+}
 h3.h3width{
-    max-width:142px;
+    max-width:190px;
 }
 h3.h3widthlong{
     max-width:400px;
